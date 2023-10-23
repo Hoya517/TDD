@@ -21,7 +21,7 @@ public class AccountTest {
 
         account = new Account(1000);
         if (account.getBalance() != 1000) {
-            fail(); //오류 발생
+            fail("getBalance() -> " + account.getBalance()); //오류 발생
         }
 
         account = new Account(0);
