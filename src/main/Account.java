@@ -12,10 +12,10 @@ public class Account {
     }
 
     public void deposit(int i) {
-
+        this.balance += i;
     }
 
     public void withDraw(int i) {
-
+        this.balance -= i;
     }
 }
