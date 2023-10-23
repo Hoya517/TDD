@@ -1,16 +1,22 @@
 package test;
 
 import main.Account;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 public class AccountTest {
 
+    private Account account;
+
+    @Before
+    public void setUp() throws Exception {
+        account = new Account(10000);
+    }
+
     @Test
     public void testAccount() throws Exception {
-        Account account = new Account(10000);
     }
 
     @Test
