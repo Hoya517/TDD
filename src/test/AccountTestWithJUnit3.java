@@ -11,6 +11,10 @@ public class AccountTestWithJUnit3 extends TestCase {   //1.TestCase를 상속
     private Account account;
 //    private Connection connection;
 
+    public AccountTestWithJUnit3() {
+        System.out.println("Constructor was called");
+    }
+
     public void setUp() throws Exception {
         //3.setUp()을 사용해 픽스처의 상태를 초기화
         account = new Account(10000);
