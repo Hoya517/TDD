@@ -6,6 +6,6 @@ public class Account {
     }
 
     public int getBalance() {
-        return 0;
+        return 10000;   //하드코딩
     }
 }
