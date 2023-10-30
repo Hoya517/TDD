@@ -18,4 +18,8 @@ public class User {
     public void addCoupon(ICoupon coupon) {
         list.add(coupon);
     }
+
+    public ICoupon getLastOccupiedCoupon() {
+        return list.get(list.size() - 1);
+    }
 }
