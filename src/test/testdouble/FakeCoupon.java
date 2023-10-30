@@ -3,7 +3,19 @@ package test.testdouble;
 import main.testdouble.ICoupon;
 import main.testdouble.Item;
 
-public class StubCoupon implements ICoupon {
+import java.util.ArrayList;
+import java.util.List;
+
+public class FakeCoupon implements ICoupon {
+
+    List<String> categoryList = new ArrayList<>();
+
+    public FakeCoupon() {
+        categoryList.add("부엌칼");
+        categoryList.add("아동 장난감");
+        categoryList.add("조리기구");
+    }
+
     @Override
     public String getName() {
         return "VIP 고객 한가위 감사쿠폰";
@@ -21,10 +33,8 @@ public class StubCoupon implements ICoupon {
 
     @Override
     public boolean isApplicable(Item item) {
-        if ("부엌칼".equals(item.getCategory())) {
+        if (this.categoryList.contains(item.getCategory())) {
             return true;
-        } else if ("알람시계".equals(item.getCategory())) {
-            return false;
         }
         return false;
     }

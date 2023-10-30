@@ -45,7 +45,7 @@ public class UserTest {
     public void testGetOrderPrice_undiscountableItem() throws Exception {
         PriceCalculator calculator = new PriceCalculator();
         Item item = new Item("R2D2", "알람시계", 20000);
-        StubCoupon coupon = new StubCoupon();
+        ICoupon coupon = new StubCoupon();  //new FakeCoupon();
 
         assertEquals("쿠폰 적용 안 되는 아이템", 20000, calculator.getOrderPrice(item, coupon));
     }

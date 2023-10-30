@@ -14,4 +14,8 @@ public class Item {
     public int getPrice() {
         return this.price;
     }
+
+    public String getCategory() {
+        return category;
+    }
 }
