@@ -1,7 +1,7 @@
-package test;
+package test.tdd;
 
 import junit.framework.TestCase;
-import main.Account;
+import main.tdd.Account;
 
 import static org.junit.Assert.assertEquals;
 

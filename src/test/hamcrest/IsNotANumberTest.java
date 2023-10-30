@@ -1,8 +1,8 @@
-package test;
+package test.hamcrest;
 
 import org.junit.Test;
 
-import static main.IsNotANumber.notANumber;
+import static main.hamcrest.IsNotANumber.notANumber;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 

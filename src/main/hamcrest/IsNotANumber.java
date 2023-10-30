@@ -1,4 +1,4 @@
-package main;
+package main.hamcrest;
 
 import org.hamcrest.Description;
 import org.hamcrest.Factory;

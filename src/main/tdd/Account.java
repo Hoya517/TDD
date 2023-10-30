@@ -1,4 +1,4 @@
-package main;
+package main.tdd;
 
 public class Account {
     private int balance;

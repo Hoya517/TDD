@@ -1,6 +1,6 @@
-package test;
+package test.tdd;
 
-import main.Account;
+import main.tdd.Account;
 import org.junit.Before;
 import org.junit.Test;
 
