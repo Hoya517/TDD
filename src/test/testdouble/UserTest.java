@@ -40,4 +40,13 @@ public class UserTest {
 
         assertEquals("쿠폰으로 인해 할인된 가격", 93000, calculator.getOrderPrice(item, coupon));
     }
+
+    @Test
+    public void testGetOrderPrice_undiscountableItem() throws Exception {
+        PriceCalculator calculator = new PriceCalculator();
+        Item item = new Item("R2D2", "알람시계", 20000);
+        StubCoupon coupon = new StubCoupon();
+
+        assertEquals("쿠폰 적용 안 되는 아이템", 20000, calculator.getOrderPrice(item, coupon));
+    }
 }
