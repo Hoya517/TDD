@@ -13,7 +13,7 @@ public class UserTest {
         User user = new User("hoya");
         assertEquals("쿠폰 수령 전", 0, user.getTotalCouponCount());
 
-        ICoupon coupon = null;
+        ICoupon coupon = new DummyCoupon();
 
         user.addCoupon(coupon);
         assertEquals("쿠폰 수령 후", 1, user.getTotalCouponCount());
