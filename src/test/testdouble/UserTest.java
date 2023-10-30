@@ -36,9 +36,12 @@ public class UserTest {
     public void testGetOrderPrice_discountableItem() throws Exception {
         PriceCalculator calculator = new PriceCalculator();
         Item item = new Item("LightSavor", "부엌칼", 100000);
-        ICoupon coupon = new StubCoupon();
+        ICoupon coupon = new SpyCoupon();
 
         assertEquals("쿠폰으로 인해 할인된 가격", 93000, calculator.getOrderPrice(item, coupon));
+
+        int methodCallCount = ((SpyCoupon) coupon).getIsApplicableCallCount();
+        assertEquals("coupon.isApplicable 메소드 호출 횟수", 1, methodCallCount);
     }
 
     @Test
